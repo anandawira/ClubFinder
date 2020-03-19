@@ -1,4 +1,4 @@
-var main = function () {
+var main = () => {
     const searchElement = document.querySelector("#searchElement");
     const buttonSearchElement = document.querySelector("#searchButtonElement");
     const clubListElement = document.querySelector("#clubList");
@@ -8,7 +8,7 @@ var main = function () {
         dataSource.searchClub(searchElement.value);
     };
 
-    const renderResult = function (results) {
+    const renderResult = results => {
         clubListElement.innerHTML = "";
         results.forEach(function (club) {
             const {name, fanArt, description} = club
@@ -30,7 +30,7 @@ var main = function () {
         })
     };
 
-    const fallbackResult = function (message) {
+    const fallbackResult = message => {
         clubListElement.innerHTML = "";
         clubListElement.innerHTML += `<h2 class="placeholder">${message}</h2>`;
     };
