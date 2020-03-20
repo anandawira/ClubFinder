@@ -12,6 +12,7 @@
 //         this.onFailed(`${keyword} is not found`);
 //     }
 // };
+import clubs from './clubs.js';
 
 class DataSource{
     static searchClub(keyword){
@@ -26,3 +27,5 @@ class DataSource{
         })
     }
 }
+
+export default DataSource;
